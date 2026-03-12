@@ -1,0 +1,119 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean tech feel */
+}
+
+:root {
+    --primary-orange: #FF7A21; /* Matches your logo */
+    --dark-bg: #121212;
+    --light-text: #FFFFFF;
+    --gray-bg: #F4F4F4;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling requirement */
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Sticky Navigation */
+#navbar {
+    position: sticky;
+    top: 0;
+    background: var(--dark-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    z-index: 1000;
+    border-bottom: 2px solid var(--primary-orange);
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s; /* Hover state requirement */
+}
+
+#navbar ul li a:hover {
+    color: var(--primary-orange);
+}
+
+/* Hero Section */
+#hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('hero-bg.jpg'); /* Placeholder */
+    background-color: var(--dark-bg);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-btn {
+    background: var(--primary-orange);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s; /* Hover state requirement */
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+    background: #e66a1a;
+}
+
+/* Grid for Service Pillars */
+#services {
+    padding: 50px 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    background: var(--gray-bg);
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    border-top: 4px solid var(--primary-orange);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+    }
+    #navbar ul {
+        margin-top: 10px;
+    }
+    #hero h1 {
+        font-size: 2rem;
+    }
+}
